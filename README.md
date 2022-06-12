@@ -6,3 +6,6 @@ In order to use this download/git clone this repo as a zip and extract the folde
 The end result should look like this
 
 ![](screenshots/screenshot.png)
+
+
+NOTE: the KITTY terminal config is not complete and isnt well made at the moment, this will improve in the future, for now feel free to use the terminator config instead.
