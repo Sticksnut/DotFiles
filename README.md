@@ -13,6 +13,8 @@ THINGS TO NOTE: the KITTY terminal config is not complete and isnt well made at 
 Please remember to change ``set $monitor1`` ```set $monitor2``` ```exec_always xrandr --output --mode 1920x1080 --rate 240.00 --primary --left-of DP-2```
 and ```workspace $ws1 output $monitor1``` to whatever corosponds to your system/setup, you can run xrandr in the terminal to find out what your monitors are listed as.
 
+You may also need to change the fonts used in the polybar config as the font i use is a paid font.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The CLI tools used in the screenshot are as follows: [Unimatrix](https://github.com/will8211/unimatrix) [Htop](https://htop.dev/) [Cava](https://github.com/karlstav/cava) [Pokeshell](https://github.com/acxz/pokeshell) [Afetch](https://github.com/13-CF/afetch) 
