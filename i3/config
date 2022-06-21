@@ -251,3 +251,5 @@ exec_always /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
 
 exec_always xinput --set-prop 18 "libinput Accel Speed" -0.4
 
+# move workspace to other monitor // Thanks for this peyton :D
+bindsym $mod+Tab  move workspace to output right
