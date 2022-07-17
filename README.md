@@ -15,6 +15,8 @@ and ```workspace $ws1 output $monitor1``` to whatever corosponds to your system/
 
 You may also need to change the fonts used in the polybar config as the font i use is a paid font.
 
+Some things in this config may be scuffed but please bare with me as i try to clean it up.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The CLI tools used in the screenshot are as follows: [Unimatrix](https://github.com/will8211/unimatrix) [Htop](https://htop.dev/) [Cava](https://github.com/karlstav/cava) [Pokeshell](https://github.com/acxz/pokeshell) [Afetch](https://github.com/13-CF/afetch) 
