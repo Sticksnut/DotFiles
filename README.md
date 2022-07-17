@@ -17,6 +17,7 @@ You may also need to change the fonts used in the polybar config as the font i u
 
 Some things in this config may be scuffed but please bare with me as i try to clean it up.
 
+You will need to have the rofi-emoji package installed for the emoji picker to work.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The CLI tools used in the screenshot are as follows: [Unimatrix](https://github.com/will8211/unimatrix) [Htop](https://htop.dev/) [Cava](https://github.com/karlstav/cava) [Pokeshell](https://github.com/acxz/pokeshell) [Afetch](https://github.com/13-CF/afetch) 
