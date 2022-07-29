@@ -256,3 +256,9 @@ bindsym $mod+Tab  move workspace to output right
 
 # Enabling rofi emoji picker
 bindsym $mod+period exec rofi -show emoji
+
+# Clipboard manager
+bindsym $mod+comma exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+# Enable polkit
+exec_always lxpolkit
