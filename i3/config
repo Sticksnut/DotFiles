@@ -111,8 +111,9 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 #Defining what DisplayPort output is what monitor. MAKE SURE TO RUN XRANDR IN THE TERMINAL AND CHANGE THESE SETTINGS FOR YOUR OWN MONITOR/S
-set $monitor1 "DP-4"
-set $monitor2 "DP-2"
+set $monitor1 "DP-2"
+set $monitor2 "DP-4"
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -207,20 +208,20 @@ client.urgent		$ubgcolor	$ubgcolor		$textcolor	$ubgcolor
 #}
 
 #Set correct display settings. MAKE SURE TO RUN XRANDR IN THE TERMINAL AND CHANGE THESE SETTINGS FOR YOUR OWN MONITOR/S
-exec_always xrandr --output --mode 1920x1080 --rate 240.00 --primary --left-of DP-2
+exec_always xrandr --output DP-2 --mode 1920x1080 --rate 240.00 --primary --left-of DP-4
 
 #Set wallpaper using nitrogen
 exec nitrogen --restore
 
 #Enable compositor
-exec_always picom --experimental-backends 
+exec_always picom 
 
 #Set flameshot key to prntscreen
 bindsym Print exec flameshot gui
 
 #Modifying the i3 window border
 
-for_window [class="^.*"] border pixel 3
+ for_window [class="^.*"] border pixel 3
 
 #Setting up gaps 
 
@@ -249,7 +250,7 @@ exec_always /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
 
 #Execute mouse sens comamnd
 
-exec_always xinput --set-prop 18 "libinput Accel Speed" -0.4
+exec_always xinput --set-prop 13 "libinput Accel Speed" -0.6
 
 # move workspace to other monitor // Thanks for this peyton :D
 bindsym $mod+Tab  move workspace to output right
@@ -257,8 +258,17 @@ bindsym $mod+Tab  move workspace to output right
 # Enabling rofi emoji picker
 bindsym $mod+period exec rofi -show emoji
 
+# Clipboard daemon
+exec_always greenclip daemon
+
 # Clipboard manager
 bindsym $mod+comma exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # Enable polkit
 exec_always lxpolkit
+
+# Fix for origin crashing
+for_window [instance="origin.exe"] floating enable
+for_window [title="Origin"] floating enable
+
+	
